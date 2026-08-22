@@ -9,6 +9,7 @@
 - Responsive capture: `implementation-mobile.png`, 390 × 844 px at a 390 × 844 CSS viewport and device scale factor 1.
 - State: default desktop homepage, mobile homepage, mobile menu open, empty cart, and cart with one line item.
 - Logo refinement evidence: the user's 900 × 438 issue capture and the updated 900 × 438 homepage were reviewed together at the same viewport. A 390 × 844 mobile capture was also inspected.
+- Hero photography refinement: the user-supplied Build 1 hero and the updated implementation were compared together at an 864 × 552 viewport, followed by desktop 1440 × 1024 and mobile 390 × 844 crop checks.
 
 ## Full-view comparison evidence
 
@@ -18,7 +19,7 @@ The fictional storefront and generated lifestyle scenes were intentionally repla
 
 ## Focused comparison evidence
 
-- Hero: composition, navigation density, serif/sans pairing, teal/cream/gold balance, CTA hierarchy, and lead-time cue align with the selected source. The hero imagery intentionally prioritises truthful Pantry d'Or food photography over the generated baker scene.
+- Hero: composition, navigation density, serif/sans pairing, teal/cream/gold balance, CTA hierarchy, and lead-time cue align with the selected source. The updated hero adopts Build 1's warm editorial bread-and-catering photography direction: flour-dusted sourdough, sliced crumb, catered salads and olives, cinematic side light, and deep teal shadows.
 - Brand crest: the original lettering, wheat, bread, plaque, and ribbon are preserved pixel-for-pixel. Only the edge-connected teal photo backdrop was removed, so the crest now blends directly into the navigation background without the former rectangular boundary. Restrained drop shadows add depth without introducing a glow or altering the mark.
 - Categories and products: three-up rhythm, dark category band, editorial product layout, image-led hierarchy, real prices, and concise descriptions preserve the source while improving the shopping path.
 - Craft: the split image-and-copy anatomy and `Flour. Water. Salt.` line match the source. The image is a real Pantry d'Or bread display rather than generated hands.
@@ -43,6 +44,7 @@ The fictional storefront and generated lifestyle scenes were intentionally repla
 - Tested desktop at 1440 × 1024 and mobile at 390 × 844.
 - Browser console errors and warnings checked: none.
 - Rechecked the refined crest at 900 × 438 and 390 × 844; no cropping, background seam, overlap, or loss of legibility was observed.
+- Rechecked the Build 1-inspired hero at 1440 × 1024, 864 × 552, and 390 × 844; the bread remains the clear focal point, the catering context survives each crop, and no image loading or console issues were observed.
 
 ## Findings
 
@@ -55,6 +57,7 @@ The fictional storefront and generated lifestyle scenes were intentionally repla
 2. Replaced the mismatched image with Pantry d'Or's real `Lunch_Pack.jpg`, added horizontal overflow protection, and hid the cart drawer when closed.
 3. Recaptured desktop, focused sections, mobile, mobile menu, and cart. Post-fix evidence shows correct imagery, 1440 px document width, responsive layout, and working interactions with no console errors.
 4. Removed the visible rectangular backdrop from the supplied crest, switched header and footer marks to the transparent asset, added restrained depth, then compared the user's issue capture with the updated desktop result and rechecked mobile.
+5. Replaced the brighter catalogue platter hero with a dedicated Build 1-inspired editorial photograph, tuned the focal crop, compared it directly with the supplied Build 1 hero, and verified desktop and mobile presentation.
 
 ## Implementation checklist
 

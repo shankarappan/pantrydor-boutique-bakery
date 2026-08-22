@@ -86,7 +86,7 @@ export function App() {
       <section className="hero">
         <AppHeader cartCount={cartCount} onCart={() => setCartOpen(true)} menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
         <div className="hero-copy"><p className="eyebrow">Boutique bakery · Rotorua</p><h1>Artisan baking.<br /><em>Made for sharing.</em></h1><p className="hero-intro">Handcrafted in Rotorua with New Zealand-grown ingredients. Baked fresh. Shared often.</p><div className="hero-actions"><a className="button button-gold" href={`${SHOP}/collections/catering-collection`}>Order for your occasion <ArrowRight /></a><a className="button button-outline" href={`${SHOP}/collections/artisanal-breads`}>Explore today’s bake</a></div><div className="lead-time"><Clock aria-hidden="true" weight="light" /><span>Orders may require 24–48 hours depending on product.</span></div></div>
-        <div className="hero-image"><img src={asset("pantry-platter.png")} alt="A Pantry d'Or platter of artisan bread, fruit, cheese and cured meats" /></div>
+        <div className="hero-image"><img src={asset("build-1-hero.png")} alt="Artisan sourdough loaves with fresh catered salads and olives" /></div>
         <div className="hero-scroll"><span>Discover</span><span className="scroll-line" /></div>
       </section>
 

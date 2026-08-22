@@ -10,6 +10,7 @@ When implementing from a selected generated mock, treat that image as the source
 
 - The chosen visual direction is ideation option 3: cinematic deep teal, warm cream editorial sections, large serif typography, restrained antique-gold details, and real food photography.
 - Borrow option 1's clearer category pathways, featured product flow, and trust/value strip.
-- Do not use fictional storefront imagery. Use only supplied or public Pantry d'Or product, bakery, and brand photography; keep contact details verified against the source brief.
+- Use option 1's warm, editorial bread-and-catering photography direction for the homepage hero rather than the brighter catalogue platter image.
+- Do not use fictional storefront imagery. Outside the user-selected Build 1-inspired hero, use only supplied or public Pantry d'Or product, bakery, and brand photography; keep contact details verified against the source brief.
 
 Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts/prepare-sites-build.mjs`, and `tests/sites-worker.test.mjs` intact so the same local prototype can be handed to Sites. Before a Sites handoff, run `npm run build` and `npm run test:sites`; the build must leave `dist/client/index.html`, `dist/server/index.js`, and `dist/.openai/hosting.json`.

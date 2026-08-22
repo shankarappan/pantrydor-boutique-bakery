@@ -67,7 +67,7 @@ h1 em, h2 em { font-weight: 400; }
 .lead-time svg { color: var(--gold); width: 21px; height: 21px; flex: none; }
 .hero-image { grid-column: 2; grid-row: 2; min-width: 0; position: relative; background: #ece3d0; }
 .hero-image::after { content: ""; position: absolute; inset: 0; box-shadow: inset 50px 0 90px rgba(5, 37, 45, 0.22); pointer-events: none; }
-.hero-image img { width: 100%; height: 100%; object-fit: cover; object-position: center; transform: scale(1.005); }
+.hero-image img { width: 100%; height: 100%; object-fit: cover; object-position: 62% center; transform: scale(1.005); }
 .hero-scroll { position: absolute; bottom: 24px; left: calc(42% - 4px); display: flex; gap: 12px; align-items: center; transform: rotate(90deg); transform-origin: left center; font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); z-index: 4; }
 .scroll-line { width: 45px; height: 1px; background: var(--gold); }
 .category-grid { display: grid; grid-template-columns: repeat(3, 1fr); background: var(--ink); color: #f8f1e3; }
