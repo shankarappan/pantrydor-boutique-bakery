@@ -8,9 +8,9 @@ const SHOP = "https://pantrydor.co.nz";
 const asset = (name) => `${import.meta.env.BASE_URL}assets/${name}`;
 
 const categories = [
-  { eyebrow: "Catering & events", title: "Made for the table", copy: "Platters, bundles and beautiful food for offices, celebrations and everything in between.", image: asset("build-1-catering.png"), alt: "Artisan grazing platter with sourdough, cheeses, olives, fruit and cured meats", href: `${SHOP}/collections/catering-collection` },
-  { eyebrow: "Pantry To Go", title: "Lunch, beautifully packed", copy: "Fresh lunches and everyday favourites, packed and ready when you are.", image: asset("build-1-lunches.png"), alt: "Kraft catering box filled with fresh sandwiches and rolls", href: `${SHOP}/collections/pantry-packed-lunches` },
-  { eyebrow: "Artisan breads", title: "The daily bake", copy: "Sourdoughs, croissants and seasonal bakes, handcrafted in small batches.", image: asset("build-1-breads.png"), alt: "Seeded artisan sourdough loaves on a dark bakery bench", href: `${SHOP}/collections/artisanal-breads` },
+  { eyebrow: "Catering & events", title: "Made for the table", copy: "Platters, bundles and beautiful food for offices, celebrations and everything in between.", image: asset("real-catering-grazing.jpg"), alt: "A real Pantry d'Or grazing box with sourdough, cheeses, fruit and cured meats", href: `${SHOP}/collections/catering-collection` },
+  { eyebrow: "Pantry To Go", title: "Lunch, beautifully packed", copy: "Fresh lunches and everyday favourites, packed and ready when you are.", image: asset("real-lunch-pack.jpg"), alt: "A real Pantry d'Or packed lunch with sandwich, fruit, juice and a biscuit", href: `${SHOP}/collections/pantry-packed-lunches` },
+  { eyebrow: "Artisan breads", title: "The daily bake", copy: "Sourdoughs, croissants and seasonal bakes, handcrafted in small batches.", image: asset("real-artisan-sourdough.jpg"), alt: "A freshly baked Pantry d'Or sourdough loaf on a wooden board", href: `${SHOP}/collections/artisanal-breads` },
 ];
 
 const collections = [
@@ -21,8 +21,8 @@ const collections = [
     title: "A table worth gathering around.",
     copy: "Generous platters and complete packages, composed for meetings, celebrations and shared moments.",
     count: "23 choices",
-    image: asset("build-1-catering.png"),
-    alt: "A premium Pantry d'Or-style catering spread with breads, cheeses, fruit and charcuterie",
+    image: asset("real-catering-grazing.jpg"),
+    alt: "A real Pantry d'Or grazing box with breads, cheeses, fruit and charcuterie",
     href: `${SHOP}/collections/catering-collection`,
     products: [
       { title: "Office Favorites Bundle", price: "$187", copy: "A complete spread for the working table.", href: `${SHOP}/products/office-favorites-bundle` },
@@ -39,8 +39,8 @@ const collections = [
     title: "Beautifully packed. Ready when you are.",
     copy: "Freshly made packed lunches for workshops, team days and people with somewhere delicious to be.",
     count: "5 choices",
-    image: asset("build-1-lunches.png"),
-    alt: "A kraft catering box filled with freshly made sandwiches and rolls",
+    image: asset("real-lunch-pack.jpg"),
+    alt: "A real Pantry d'Or packed lunch with sandwich, fruit, juice and a biscuit",
     href: `${SHOP}/collections/pantry-packed-lunches`,
     products: [
       { title: "Chicken Salad Sandwich Packed Lunch", price: "$22", copy: "A fresh, satisfying individual lunch.", href: `${SHOP}/products/chicken-philly-sourdough-packed-lunch` },
@@ -57,8 +57,8 @@ const collections = [
     title: "The daily bake, made slowly.",
     copy: "Naturally leavened loaves and buttery favourites, made in small batches for the everyday table.",
     count: "7 choices",
-    image: asset("build-1-breads.png"),
-    alt: "Seeded artisan sourdough loaves on a dark bakery bench",
+    image: asset("real-artisan-sourdough.jpg"),
+    alt: "A freshly baked Pantry d'Or sourdough loaf on a wooden board",
     href: `${SHOP}/collections/artisanal-breads`,
     products: [
       { title: "Spelt Sourdough", price: "$11.50", copy: "Wholesome spelt with a beautifully open crumb.", href: `${SHOP}/products/wholegrain-sour-dough` },
@@ -139,7 +139,7 @@ export function App() {
       <section className="hero">
         <AppHeader cartCount={cartCount} onCart={() => setCartOpen(true)} menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
         <div className="hero-copy"><p className="eyebrow">Boutique bakery · Rotorua</p><h1>Artisan baking.<br /><em>Made for sharing.</em></h1><p className="hero-intro">Handcrafted in Rotorua with New Zealand-grown ingredients. Baked fresh. Shared often.</p><div className="hero-actions"><a className="button button-gold" href={`${SHOP}/collections/catering-collection`}>Order for your occasion <ArrowRight /></a><a className="button button-outline" href={`${SHOP}/collections/artisanal-breads`}>Explore today’s bake</a></div><div className="lead-time"><Clock aria-hidden="true" weight="light" /><span>Orders may require 24–48 hours depending on product.</span></div></div>
-        <div className="hero-image"><img src={asset("build-1-hero.png")} alt="Artisan sourdough loaves with fresh catered salads and olives" /></div>
+        <div className="hero-image"><img src={asset("real-hero-bakery.jpg")} alt="Fresh dark malt rye sourdough loaves in Pantry d'Or's bakery cabinet" /></div>
       </section>
 
       <main id="main">
