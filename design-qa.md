@@ -11,6 +11,9 @@
 - Logo refinement evidence: the user's 900 × 438 issue capture and the updated 900 × 438 homepage were reviewed together at the same viewport. A 390 × 844 mobile capture was also inspected.
 - Hero photography refinement: the user-supplied Build 1 hero and the updated implementation were compared together at an 864 × 552 viewport, followed by desktop 1440 × 1024 and mobile 390 × 844 crop checks.
 - Gradient and category-image refinement: the user's marked 1989 × 1248 hero screenshot and 2048 × 788 category screenshot were reproduced at matching CSS viewport sizes; the corrected category stack was also checked at 390 × 844.
+- Catalogue-demo source: `/private/tmp/pantrydor-products-source.jpg`, the approved public homepage at a 1440 × 1000 CSS viewport and device scale factor 1.
+- Catalogue-demo implementation: `/private/tmp/pantrydor-products-final-desktop.jpg` at a 1440 × 1000 CSS viewport and `/private/tmp/pantrydor-products-final-mobile.png` at a normalized 390 × 844 mobile CSS viewport. The source and desktop implementation were opened together in the same comparison input.
+- Catalogue-demo states: Catering & Platters, Pantry To Go, and Artisan Breads tabs; desktop default; mobile stack; and one product added to the demo cart.
 
 ## Full-view comparison evidence
 
@@ -24,6 +27,7 @@ The fictional storefront and generated lifestyle scenes were intentionally repla
 - Hero transition: the image now overlaps the solid copy panel and fades from deep teal into photography across the left portion of the image. The previously unexplained vertical `Discover` marker and line are removed from both markup and styling.
 - Brand crest: the original lettering, wheat, bread, plaque, and ribbon are preserved pixel-for-pixel. Only the edge-connected teal photo backdrop was removed, so the crest now blends directly into the navigation background without the former rectangular boundary. Restrained drop shadows add depth without introducing a glow or altering the mark.
 - Categories and products: three-up rhythm, dark category band, editorial product layout, image-led hierarchy, real prices, and concise descriptions preserve the source while improving the shopping path.
+- Catalogue browser: the former three-card product preview is intentionally expanded into a cinematic split panel with three visible collection tabs, fifteen curated products, current prices, direct Shopify links, collection counts, and working demo-cart actions. The layout reuses the approved cream, teal, gold, serif, imagery and hairline language rather than introducing a separate storefront style.
 - Craft: the split image-and-copy anatomy and `Flour. Water. Salt.` line match the source. The image is a real Pantry d'Or bread display rather than generated hands.
 - Visit/contact: the dark split section, location/hours, lead-time note, contact strip, and restrained footer match the intended hierarchy without the fictional storefront.
 - Mobile: no overlap or horizontal overflow was observed at 390 × 844. Navigation, CTA stack, hero image, and type scale remain clear.
@@ -44,6 +48,7 @@ The fictional storefront and generated lifestyle scenes were intentionally repla
 - Tested mobile menu open/close.
 - Tested empty-cart state, product add-to-cart, cart total, and quantity controls.
 - Tested desktop at 1440 × 1024 and mobile at 390 × 844.
+- Tested all three collection tabs, direct product/collection destinations, a catalogue product add-to-cart action, mobile tab visibility, and horizontal overflow at 1440 × 1000 and 390 × 844.
 - Browser console errors and warnings checked: none.
 - Rechecked the refined crest at 900 × 438 and 390 × 844; no cropping, background seam, overlap, or loss of legibility was observed.
 - Rechecked the Build 1-inspired hero at 1440 × 1024, 864 × 552, and 390 × 844; the bread remains the clear focal point, the catering context survives each crop, and no image loading or console issues were observed.
@@ -62,6 +67,7 @@ The fictional storefront and generated lifestyle scenes were intentionally repla
 4. Removed the visible rectangular backdrop from the supplied crest, switched header and footer marks to the transparent asset, added restrained depth, then compared the user's issue capture with the updated desktop result and rechecked mobile.
 5. Replaced the brighter catalogue platter hero with a dedicated Build 1-inspired editorial photograph, tuned the focal crop, compared it directly with the supplied Build 1 hero, and verified desktop and mobile presentation.
 6. Added Build 1's soft teal-to-photo transition, removed the vertical `Discover` label, and replaced all three category images with crop-safe editorial assets. Verified the exact issue widths and the mobile stack with no browser warnings or errors.
+7. Replaced the limited three-product block with a tabbed collection browser grounded in the approved homepage and current Shopify catalogue. The first mobile pass hid the third tab off-canvas; the post-fix pass fits all three tabs in one row, preserves the 350 px content frame, shows the complete collection panel without horizontal overflow, and keeps every product action reachable.
 
 ## Implementation checklist
 
@@ -72,5 +78,6 @@ The fictional storefront and generated lifestyle scenes were intentionally repla
 - [x] Mobile menu and demo cart verified.
 - [x] Production build and hosting tests passed.
 - [x] Hero overlap inspected at the reported tall desktop crop; the dark vertical compositor seam is removed while the soft photographic fade remains intact.
+- [x] Three collection tabs, fifteen curated product rows, current prices, external ordering links, and demo-cart actions verified on desktop and mobile.
 
 final result: passed
