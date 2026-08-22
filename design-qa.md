@@ -10,6 +10,7 @@
 - State: default desktop homepage, mobile homepage, mobile menu open, empty cart, and cart with one line item.
 - Logo refinement evidence: the user's 900 × 438 issue capture and the updated 900 × 438 homepage were reviewed together at the same viewport. A 390 × 844 mobile capture was also inspected.
 - Hero photography refinement: the user-supplied Build 1 hero and the updated implementation were compared together at an 864 × 552 viewport, followed by desktop 1440 × 1024 and mobile 390 × 844 crop checks.
+- Gradient and category-image refinement: the user's marked 1989 × 1248 hero screenshot and 2048 × 788 category screenshot were reproduced at matching CSS viewport sizes; the corrected category stack was also checked at 390 × 844.
 
 ## Full-view comparison evidence
 
@@ -20,6 +21,7 @@ The fictional storefront and generated lifestyle scenes were intentionally repla
 ## Focused comparison evidence
 
 - Hero: composition, navigation density, serif/sans pairing, teal/cream/gold balance, CTA hierarchy, and lead-time cue align with the selected source. The updated hero adopts Build 1's warm editorial bread-and-catering photography direction: flour-dusted sourdough, sliced crumb, catered salads and olives, cinematic side light, and deep teal shadows.
+- Hero transition: the image now overlaps the solid copy panel and fades from deep teal into photography across the left portion of the image. The previously unexplained vertical `Discover` marker and line are removed from both markup and styling.
 - Brand crest: the original lettering, wheat, bread, plaque, and ribbon are preserved pixel-for-pixel. Only the edge-connected teal photo backdrop was removed, so the crest now blends directly into the navigation background without the former rectangular boundary. Restrained drop shadows add depth without introducing a glow or altering the mark.
 - Categories and products: three-up rhythm, dark category band, editorial product layout, image-led hierarchy, real prices, and concise descriptions preserve the source while improving the shopping path.
 - Craft: the split image-and-copy anatomy and `Flour. Water. Salt.` line match the source. The image is a real Pantry d'Or bread display rather than generated hands.
@@ -45,6 +47,7 @@ The fictional storefront and generated lifestyle scenes were intentionally repla
 - Browser console errors and warnings checked: none.
 - Rechecked the refined crest at 900 × 438 and 390 × 844; no cropping, background seam, overlap, or loss of legibility was observed.
 - Rechecked the Build 1-inspired hero at 1440 × 1024, 864 × 552, and 390 × 844; the bread remains the clear focal point, the catering context survives each crop, and no image loading or console issues were observed.
+- Rechecked the reported problem widths at 1989 × 1248 and 2048 × 788. All three category images fill their frames, the lunch box remains centred, and the rightmost bread card no longer contains the clipped shelf, labels, or blank white area. The 390 × 844 mobile stack also retains complete focal subjects.
 
 ## Findings
 
@@ -58,6 +61,7 @@ The fictional storefront and generated lifestyle scenes were intentionally repla
 3. Recaptured desktop, focused sections, mobile, mobile menu, and cart. Post-fix evidence shows correct imagery, 1440 px document width, responsive layout, and working interactions with no console errors.
 4. Removed the visible rectangular backdrop from the supplied crest, switched header and footer marks to the transparent asset, added restrained depth, then compared the user's issue capture with the updated desktop result and rechecked mobile.
 5. Replaced the brighter catalogue platter hero with a dedicated Build 1-inspired editorial photograph, tuned the focal crop, compared it directly with the supplied Build 1 hero, and verified desktop and mobile presentation.
+6. Added Build 1's soft teal-to-photo transition, removed the vertical `Discover` label, and replaced all three category images with crop-safe editorial assets. Verified the exact issue widths and the mobile stack with no browser warnings or errors.
 
 ## Implementation checklist
 

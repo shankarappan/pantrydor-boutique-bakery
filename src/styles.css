@@ -66,10 +66,12 @@ h1 em, h2 em { font-weight: 400; }
 .lead-time { margin-top: 28px; display: flex; gap: 12px; align-items: center; color: rgba(255,255,255,0.7); font-size: 12px; line-height: 1.5; }
 .lead-time svg { color: var(--gold); width: 21px; height: 21px; flex: none; }
 .hero-image { grid-column: 2; grid-row: 2; min-width: 0; position: relative; background: #ece3d0; }
-.hero-image::after { content: ""; position: absolute; inset: 0; box-shadow: inset 50px 0 90px rgba(5, 37, 45, 0.22); pointer-events: none; }
+.hero-image::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, var(--ink-dark) 0%, rgba(5, 37, 45, 0.92) 5%, rgba(5, 37, 45, 0.55) 14%, rgba(5, 37, 45, 0) 30%); pointer-events: none; }
 .hero-image img { width: 100%; height: 100%; object-fit: cover; object-position: 62% center; transform: scale(1.005); }
-.hero-scroll { position: absolute; bottom: 24px; left: calc(42% - 4px); display: flex; gap: 12px; align-items: center; transform: rotate(90deg); transform-origin: left center; font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); z-index: 4; }
-.scroll-line { width: 45px; height: 1px; background: var(--gold); }
+
+@media (min-width: 761px) {
+  .hero-image { width: calc(100% + 120px); margin-left: -120px; z-index: 1; }
+}
 .category-grid { display: grid; grid-template-columns: repeat(3, 1fr); background: var(--ink); color: #f8f1e3; }
 .category-card { min-width: 0; border-right: 1px solid rgba(231, 201, 142, 0.35); }
 .category-card:last-child { border-right: 0; }
@@ -183,7 +185,6 @@ h1 em, h2 em { font-weight: 400; }
   .hero { grid-template-columns: 48% 52%; min-height: 760px; }
   .site-header { grid-template-columns: 240px 1fr auto; }
   .brand { width: 205px; }
-  .hero-scroll { left: calc(48% - 4px); }
   .category-image { height: 270px; }
   .category-copy { padding-inline: 30px; }
   .featured { grid-template-columns: 1fr; }
@@ -215,7 +216,7 @@ h1 em, h2 em { font-weight: 400; }
   .hero-intro { font-size: 15px; }
   .hero-actions { width: 100%; }
   .hero-actions .button { width: 100%; }
-  .hero-scroll { display: none; }
+  .hero-image::after { display: none; }
   .mobile-menu { position: fixed; z-index: 50; inset: 0; background: var(--ink-dark); padding: 30px 24px; display: flex; flex-direction: column; transform: translateX(-101%); transition: transform 300ms ease; }
   .mobile-menu.is-open { transform: translateX(0); }
   .mobile-menu > button { color: var(--cream); border-color: rgba(255,255,255,.25); align-self: flex-end; }

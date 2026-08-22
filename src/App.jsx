@@ -8,9 +8,9 @@ const SHOP = "https://pantrydor.co.nz";
 const asset = (name) => `${import.meta.env.BASE_URL}assets/${name}`;
 
 const categories = [
-  { eyebrow: "Catering & events", title: "Made for the table", copy: "Platters, bundles and beautiful food for offices, celebrations and everything in between.", image: asset("catering.jpg"), alt: "Pantry d'Or catering platter with bread, fruit, cheese and charcuterie", href: `${SHOP}/collections/catering-collection` },
-  { eyebrow: "Pantry To Go", title: "Lunch, beautifully packed", copy: "Fresh lunches and everyday favourites, packed and ready when you are.", image: asset("lunches.jpg"), alt: "Pantry d'Or packed lunch display", href: `${SHOP}/collections/pantry-packed-lunches` },
-  { eyebrow: "Artisan breads", title: "The daily bake", copy: "Sourdoughs, croissants and seasonal bakes, handcrafted in small batches.", image: asset("artisan-breads.png"), alt: "Fresh artisan sourdough loaves at Pantry d'Or", href: `${SHOP}/collections/artisanal-breads` },
+  { eyebrow: "Catering & events", title: "Made for the table", copy: "Platters, bundles and beautiful food for offices, celebrations and everything in between.", image: asset("build-1-catering.png"), alt: "Artisan grazing platter with sourdough, cheeses, olives, fruit and cured meats", href: `${SHOP}/collections/catering-collection` },
+  { eyebrow: "Pantry To Go", title: "Lunch, beautifully packed", copy: "Fresh lunches and everyday favourites, packed and ready when you are.", image: asset("build-1-lunches.png"), alt: "Kraft catering box filled with fresh sandwiches and rolls", href: `${SHOP}/collections/pantry-packed-lunches` },
+  { eyebrow: "Artisan breads", title: "The daily bake", copy: "Sourdoughs, croissants and seasonal bakes, handcrafted in small batches.", image: asset("build-1-breads.png"), alt: "Seeded artisan sourdough loaves on a dark bakery bench", href: `${SHOP}/collections/artisanal-breads` },
 ];
 
 const products = [
@@ -87,7 +87,6 @@ export function App() {
         <AppHeader cartCount={cartCount} onCart={() => setCartOpen(true)} menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
         <div className="hero-copy"><p className="eyebrow">Boutique bakery · Rotorua</p><h1>Artisan baking.<br /><em>Made for sharing.</em></h1><p className="hero-intro">Handcrafted in Rotorua with New Zealand-grown ingredients. Baked fresh. Shared often.</p><div className="hero-actions"><a className="button button-gold" href={`${SHOP}/collections/catering-collection`}>Order for your occasion <ArrowRight /></a><a className="button button-outline" href={`${SHOP}/collections/artisanal-breads`}>Explore today’s bake</a></div><div className="lead-time"><Clock aria-hidden="true" weight="light" /><span>Orders may require 24–48 hours depending on product.</span></div></div>
         <div className="hero-image"><img src={asset("build-1-hero.png")} alt="Artisan sourdough loaves with fresh catered salads and olives" /></div>
-        <div className="hero-scroll"><span>Discover</span><span className="scroll-line" /></div>
       </section>
 
       <main id="main">
