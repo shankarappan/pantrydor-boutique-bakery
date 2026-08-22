@@ -16,16 +16,17 @@
 - Catalogue-demo states: Catering & Platters, Pantry To Go, and Artisan Breads tabs; desktop default; mobile stack; and one product added to the demo cart.
 - Real-photography correction source: `/var/folders/n2/d96307fd2c91hg5g4xt_f24m0000gn/T/codex-clipboard-661960c5-e992-4838-99a7-53b7d67b6c96.png`, 3412 × 1868 px, showing the four food scenes the user identified as visibly generated.
 - Real-photography implementation: live in-app Browser captures at a 1280 × 720 CSS viewport, inspected at the top of the hero and across all three category cards. Asset integrity was also checked in the rendered page: every replacement completed with a non-zero natural width and height.
+- Final hero-crop source: `/Users/shankar/Downloads/generated-image (13).png`, 1774 × 887 px. The selected source and its 1280 × 720 implementation were opened together in one comparison input, with an additional lower-hero crop check to inspect empty space and exclude retail pricing.
 
 ## Full-view comparison evidence
 
 The implementation preserves option 3's major visual structure: cinematic deep-teal hero, high-contrast serif display type, gold primary action, three visual shopping paths, cream editorial product section, split craft story, trust strip, dark visit section, and a compact contact/footer close. Option 1's clearer category hierarchy and value strip were intentionally incorporated at the user's request.
 
-The fictional storefront and all generated food scenes have been replaced by Pantry d'Or's supplied logo and authentic public catalogue photography. The visit section uses a real Pantry d'Or catering image and verified source-brief details: 201 Ranolf Street, Rotorua; (07) 347 0231; orders@pantrydor.co.nz; and 6:00am–2:30pm daily.
+The fictional storefront is removed. Supporting food scenes use Pantry d'Or's supplied logo and authentic public catalogue photography; the homepage hero uses the user's final selected warm sourdough image. The visit section uses a real Pantry d'Or catering image and verified source-brief details: 201 Ranolf Street, Rotorua; (07) 347 0231; orders@pantrydor.co.nz; and 6:00am–2:30pm daily.
 
 ## Focused comparison evidence
 
-- Hero: composition, navigation density, serif/sans pairing, teal/cream/gold balance, CTA hierarchy, and lead-time cue align with the selected source. The food scene is now an authentic Pantry d'Or bakery-cabinet photograph with real loaves, natural depth of field, visible branded bread wrap and restrained teal colour grading. The upper crop keeps the product label out of the primary hero view.
+- Hero: composition, navigation density, serif/sans pairing, teal/cream/gold balance, CTA hierarchy, and lead-time cue align with the selected source. The final warm landscape image contains no retail labels, and its 82% horizontal focal position moves the sourdough into the visual centre of the photo panel. A shorter desktop hero, 40/60 column split, 80 px overlap and narrower fade reduce the excessive teal/photographic dead space reported by the user.
 - Hero transition: the image now overlaps the solid copy panel and fades from deep teal into photography across the left portion of the image. The previously unexplained vertical `Discover` marker and line are removed from both markup and styling.
 - Brand crest: the original lettering, wheat, bread, plaque, and ribbon are preserved pixel-for-pixel. Only the edge-connected teal photo backdrop was removed, so the crest now blends directly into the navigation background without the former rectangular boundary. Restrained drop shadows add depth without introducing a glow or altering the mark.
 - Categories and products: three-up rhythm, dark category band, editorial product layout, image-led hierarchy, real prices, and concise descriptions preserve the source while improving the shopping path. Catering, packed lunch and bread cards now use authentic Pantry d'Or product photographs; the crops retain natural packaging, imperfect food texture and real bakery presentation rather than generated styling.
@@ -39,7 +40,7 @@ The fictional storefront and all generated food scenes have been replaced by Pan
 - Fonts and typography: Cormorant Garamond and Manrope reproduce the expressive editorial serif plus quiet geometric sans. Display hierarchy, line height, tracking, and body measure remain readable at desktop and mobile sizes.
 - Spacing and layout rhythm: the implementation follows the source's dense hero/category opening and more generous cream editorial sections. Dividers and section transitions are consistent; no actionable overlap, clipping, or overflow remains.
 - Colors and visual tokens: deep teal, antique gold, parchment, cream and restrained hairlines map closely to the source. Contrast is sufficient for body copy, controls, and focus states.
-- Image quality and asset fidelity: every visible image is a real supplied or public Pantry d'Or asset. The hero and three category sources are 1365 × 2048, 1164 × 1524, 1365 × 2048 and 3024 × 4032 respectively. Crops use `object-fit: cover`, stay sharp at the tested viewport, and use descriptive alt text. No CSS art, custom SVG, placeholder imagery, generated food scene, or fictional storefront remains.
+- Image quality and asset fidelity: the visible hero is the user-selected 1774 × 887 landscape asset; the supporting category sources are authentic Pantry d'Or images at 1164 × 1524, 1365 × 2048 and 3024 × 4032. Crops use `object-fit: cover`, stay sharp at the tested viewport, and use descriptive alt text. No CSS art, custom SVG, placeholder imagery, pricing label, or fictional storefront remains.
 - Copy and content: product names, prices, lead-time caveat, address, phone, email, hours, and social handles align with the provided research. New copy stays in NZ English and the brand's restrained artisan voice.
 - Icons: all icons come from one Phosphor icon family with consistent optical weight and sizing.
 - Accessibility and behavior: skip link, semantic headings, labelled buttons, keyboard focus rings, reduced-motion handling, responsive tap targets, and image alt text are present.
@@ -56,6 +57,7 @@ The fictional storefront and all generated food scenes have been replaced by Pan
 - Rechecked the Build 1-inspired hero at 1440 × 1024, 864 × 552, and 390 × 844; the bread remains the clear focal point, the catering context survives each crop, and no image loading or console issues were observed.
 - Rechecked the reported problem widths at 1989 × 1248 and 2048 × 788. All three category images fill their frames, the lunch box remains centred, and the rightmost bread card no longer contains the clipped shelf, labels, or blank white area. The 390 × 844 mobile stack also retains complete focal subjects.
 - Rechecked the realism correction at 1280 × 720 in the in-app Browser. The hero uses an actual bakery-cabinet photograph and the category cards show a real grazing box, branded packed lunch and close-up sourdough. All nine rendered image instances loaded successfully, the document remained exactly 1280 px wide with no horizontal overflow, and the console contained no errors or warnings.
+- Rechecked the user's final hero alternative and the implementation together. The tighter 82% focal crop keeps the loaf dominant, the former `$8.90` cabinet label is absent, the bottom of the hero retains both calls to action and the lead-time cue, and no large unused teal block remains beside the photograph. The replacement loaded at 1774 × 887, document width stayed at 1280 px, and the console contained no errors or warnings.
 
 ## Findings
 
@@ -72,6 +74,7 @@ The fictional storefront and all generated food scenes have been replaced by Pan
 6. Added Build 1's soft teal-to-photo transition, removed the vertical `Discover` label, and replaced all three category images with crop-safe editorial assets. Verified the exact issue widths and the mobile stack with no browser warnings or errors.
 7. Replaced the limited three-product block with a tabbed collection browser grounded in the approved homepage and current Shopify catalogue. The first mobile pass hid the third tab off-canvas; the post-fix pass fits all three tabs in one row, preserves the 350 px content frame, shows the complete collection panel without horizontal overflow, and keeps every product action reachable.
 8. Replaced the four generated hero/category food scenes with authentic Pantry d'Or catalogue photography. Tuned the hero to an upper bakery-cabinet crop, centred the grazing and packed-lunch subjects, used a high-resolution real sourdough close-up for the bread card, and verified loading, overflow, crops and console health in the in-app Browser.
+9. Replaced the cabinet hero with the user's final warm landscape sourdough image, removed all visible pricing, tightened the desktop image to an 82% focal crop, narrowed the transition fade and reduced the oversized desktop hero area. Compared the selected source and implementation together and verified the lower hero state for unused space.
 
 ## Implementation checklist
 
@@ -83,6 +86,7 @@ The fictional storefront and all generated food scenes have been replaced by Pan
 - [x] Production build and hosting tests passed.
 - [x] Hero overlap inspected at the reported tall desktop crop; the dark vertical compositor seam is removed while the soft photographic fade remains intact.
 - [x] Three collection tabs, fifteen curated product rows, current prices, external ordering links, and demo-cart actions verified on desktop and mobile.
-- [x] Generated hero and category food scenes replaced with authentic Pantry d'Or catalogue photography and visually verified.
+- [x] Category food scenes replaced with authentic Pantry d'Or catalogue photography and visually verified; hero updated to the user's final selected image.
+- [x] Final desktop hero crop contains no retail pricing and avoids the previously reported empty lower-left area.
 
 final result: passed
