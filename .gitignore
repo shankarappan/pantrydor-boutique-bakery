@@ -1,0 +1,18 @@
+node_modules/
+dist/
+.DS_Store
+
+# Local capture attempts superseded by the curated QA evidence
+implementation-full.png
+implementation-desktop.png
+implementation-desktop-v2.png
+implementation-section-1050.png
+implementation-section-2250.png
+implementation-section-3050.png
+implementation-section-3550.png
+
+# Downloaded source assets that are not used by the site
+public/assets/brand-footer.png
+public/assets/pantry-logo-source.png
+public/assets/pantrydor-logo.jpg
+public/assets/party-pastry.jpg

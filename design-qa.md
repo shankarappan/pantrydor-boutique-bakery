@@ -1,0 +1,64 @@
+# Design QA
+
+## Evidence
+
+- Source visual truth: `design-reference.png` (selected ideation option 3), 864 × 1821 px.
+- Combined comparison: `qa-comparison.png`, 1536 × 2440 px. It places the source and every implementation checkpoint in the same comparison input.
+- Primary implementation capture: `implementation-hero.png`, 1440 × 1024 px at a 1440 × 1024 CSS viewport and device scale factor 1.
+- Focused implementation captures: `implementation-section-850.png`, `implementation-section-1900.png`, and `implementation-section-visit.png`, each 1440 × 1024 px at device scale factor 1.
+- Responsive capture: `implementation-mobile.png`, 390 × 844 px at a 390 × 844 CSS viewport and device scale factor 1.
+- State: default desktop homepage, mobile homepage, mobile menu open, empty cart, and cart with one line item.
+
+## Full-view comparison evidence
+
+The implementation preserves option 3's major visual structure: cinematic deep-teal hero, high-contrast serif display type, gold primary action, three visual shopping paths, cream editorial product section, split craft story, trust strip, dark visit section, and a compact contact/footer close. Option 1's clearer category hierarchy and value strip were intentionally incorporated at the user's request.
+
+The fictional storefront and generated lifestyle scenes were intentionally replaced by Pantry d'Or's supplied logo and public catalogue photography. The visit section uses a real Pantry d'Or catering image and verified source-brief details: 201 Ranolf Street, Rotorua; (07) 347 0231; orders@pantrydor.co.nz; and 6:00am–2:30pm daily.
+
+## Focused comparison evidence
+
+- Hero: composition, navigation density, serif/sans pairing, teal/cream/gold balance, CTA hierarchy, and lead-time cue align with the selected source. The hero imagery intentionally prioritises truthful Pantry d'Or food photography over the generated baker scene.
+- Categories and products: three-up rhythm, dark category band, editorial product layout, image-led hierarchy, real prices, and concise descriptions preserve the source while improving the shopping path.
+- Craft: the split image-and-copy anatomy and `Flour. Water. Salt.` line match the source. The image is a real Pantry d'Or bread display rather than generated hands.
+- Visit/contact: the dark split section, location/hours, lead-time note, contact strip, and restrained footer match the intended hierarchy without the fictional storefront.
+- Mobile: no overlap or horizontal overflow was observed at 390 × 844. Navigation, CTA stack, hero image, and type scale remain clear.
+
+## Required fidelity surfaces
+
+- Fonts and typography: Cormorant Garamond and Manrope reproduce the expressive editorial serif plus quiet geometric sans. Display hierarchy, line height, tracking, and body measure remain readable at desktop and mobile sizes.
+- Spacing and layout rhythm: the implementation follows the source's dense hero/category opening and more generous cream editorial sections. Dividers and section transitions are consistent; no actionable overlap, clipping, or overflow remains.
+- Colors and visual tokens: deep teal, antique gold, parchment, cream and restrained hairlines map closely to the source. Contrast is sufficient for body copy, controls, and focus states.
+- Image quality and asset fidelity: every visible image is a real supplied or public Pantry d'Or asset. Crops use `object-fit: cover`, stay sharp at the tested viewports, and use descriptive alt text. No CSS art, custom SVG, placeholder imagery, or fictional storefront remains.
+- Copy and content: product names, prices, lead-time caveat, address, phone, email, hours, and social handles align with the provided research. New copy stays in NZ English and the brand's restrained artisan voice.
+- Icons: all icons come from one Phosphor icon family with consistent optical weight and sizing.
+- Accessibility and behavior: skip link, semantic headings, labelled buttons, keyboard focus rings, reduced-motion handling, responsive tap targets, and image alt text are present.
+
+## Interaction and console checks
+
+- Tested desktop anchor navigation to `#craft`.
+- Tested mobile menu open/close.
+- Tested empty-cart state, product add-to-cart, cart total, and quantity controls.
+- Tested desktop at 1440 × 1024 and mobile at 390 × 844.
+- Browser console errors and warnings checked: none.
+
+## Findings
+
+- No actionable P0, P1, or P2 differences remain.
+- P3: the live catalogue photography varies in lighting and crop more than the generated reference. This is an intentional truthfulness trade-off and can be improved later with a dedicated Pantry d'Or photo shoot.
+
+## Comparison history
+
+1. Initial capture exposed a mismatched collection asset for Pantry To Go and an off-canvas cart affecting full-page capture width.
+2. Replaced the mismatched image with Pantry d'Or's real `Lunch_Pack.jpg`, added horizontal overflow protection, and hid the cart drawer when closed.
+3. Recaptured desktop, focused sections, mobile, mobile menu, and cart. Post-fix evidence shows correct imagery, 1440 px document width, responsive layout, and working interactions with no console errors.
+
+## Implementation checklist
+
+- [x] Selected visual direction translated into responsive code.
+- [x] Fictional storefront removed.
+- [x] Real brand and product assets placed.
+- [x] Primary shopping and contact links wired.
+- [x] Mobile menu and demo cart verified.
+- [x] Production build and hosting tests passed.
+
+final result: passed
