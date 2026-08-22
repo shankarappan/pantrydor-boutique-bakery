@@ -71,5 +71,6 @@ The fictional storefront and generated lifestyle scenes were intentionally repla
 - [x] Primary shopping and contact links wired.
 - [x] Mobile menu and demo cart verified.
 - [x] Production build and hosting tests passed.
+- [x] Hero overlap inspected at the reported tall desktop crop; the dark vertical compositor seam is removed while the soft photographic fade remains intact.
 
 final result: passed
