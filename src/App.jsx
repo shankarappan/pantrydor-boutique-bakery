@@ -31,7 +31,7 @@ function AppHeader({ cartCount, onCart, menuOpen, setMenuOpen }) {
   const close = () => setMenuOpen(false);
   return (
     <header className="site-header">
-      <a className="brand" href="#top" aria-label="Pantry d'Or home"><img src="/assets/pantrydor-crest.png" alt="Pantry d'Or Boutique Bakery" /></a>
+      <a className="brand" href="#top" aria-label="Pantry d'Or home"><img src="/assets/pantrydor-crest-transparent.png" alt="Pantry d'Or Boutique Bakery" /></a>
       <nav className="desktop-nav" aria-label="Primary navigation"><a href="#shop">Shop</a><a href="#catering">Catering</a><a href="#craft">Our craft</a><a href="#visit">Visit</a></nav>
       <button className="menu-toggle" type="button" onClick={() => setMenuOpen(true)} aria-label="Open menu"><List aria-hidden="true" /></button>
       <button className="cart-button" type="button" onClick={onCart} aria-label={`Open cart, ${cartCount} items`}><ShoppingBag aria-hidden="true" weight="light" /><span>{cartCount}</span></button>
@@ -110,7 +110,7 @@ export function App() {
         <section className="contact-strip" aria-label="Contact information"><a href="tel:+6473470231"><Phone weight="light" /><span><small>Call us</small>(07) 347 0231</span></a><a href="mailto:orders@pantrydor.co.nz"><EnvelopeSimple weight="light" /><span><small>Email us</small>orders@pantrydor.co.nz</span></a><div><Clock weight="light" /><span><small>Order enquiries</small>24–48 hours may be required</span></div><a href="https://www.instagram.com/pantry_dor/"><InstagramLogo weight="light" /><span><small>Follow our bakes</small>@pantry_dor</span></a></section>
       </main>
 
-      <footer className="site-footer"><div className="footer-brand"><img src="/assets/pantrydor-crest.png" alt="Pantry d'Or Boutique Bakery" /><p>Crafted with care by the team behind Lime Cafe.</p></div><nav aria-label="Footer navigation"><a href="#shop">Shop</a><a href="#catering">Catering</a><a href="#craft">Our craft</a><a href="#visit">Visit</a></nav><div className="socials"><a href="https://www.facebook.com/Pantrydorboutiquebakery" aria-label="Facebook"><FacebookLogo /></a><a href="https://www.instagram.com/pantry_dor/" aria-label="Instagram"><InstagramLogo /></a></div><div className="legal"><span>© 2026 Pantry d’Or Boutique Bakery</span><a href={`${SHOP}/policies/privacy-policy`}>Privacy</a><a href={`${SHOP}/policies/terms-of-service`}>Terms</a></div></footer>
+      <footer className="site-footer"><div className="footer-brand"><img src="/assets/pantrydor-crest-transparent.png" alt="Pantry d'Or Boutique Bakery" /><p>Crafted with care by the team behind Lime Cafe.</p></div><nav aria-label="Footer navigation"><a href="#shop">Shop</a><a href="#catering">Catering</a><a href="#craft">Our craft</a><a href="#visit">Visit</a></nav><div className="socials"><a href="https://www.facebook.com/Pantrydorboutiquebakery" aria-label="Facebook"><FacebookLogo /></a><a href="https://www.instagram.com/pantry_dor/" aria-label="Instagram"><InstagramLogo /></a></div><div className="legal"><span>© 2026 Pantry d’Or Boutique Bakery</span><a href={`${SHOP}/policies/privacy-policy`}>Privacy</a><a href={`${SHOP}/policies/terms-of-service`}>Terms</a></div></footer>
       <CartDrawer open={cartOpen} items={items} onClose={() => setCartOpen(false)} updateQuantity={updateQuantity} />
     </div>
   );
